@@ -1,4 +1,4 @@
-# two-log-cli [![Build Status](https://travis-ci.org/chinanf-boy/two-log-cli.svg?branch=master)](https://travis-ci.org/chinanf-boy/two-log-cli) [![codecov](https://codecov.io/gh/chinanf-boy/two-log-cli/badge.svg?branch=master)](https://codecov.io/gh/chinanf-boy/two-log-cli?branch=master)
+# two-log-cli [![Build Status](https://travis-ci.org/chinanf-boy/two-log-cli.svg?branch=master)](https://travis-ci.org/chinanf-boy/two-log-cli)
 
 > switch `ora` and `winston` , if `debug == true` log => `winston`, else log => `ora`
 
