@@ -1,0 +1,63 @@
+{
+	"name": "two-log-cli",
+	"version": "0.0.0",
+	"description": "cli for two-log",
+	"license": "MIT",
+	"main":"index.js",
+	"repository": "chinanf-boy/two-log-cli",
+	"author": {
+		"name": "chinanf-boy",
+		"email": "865501259@qq.com",
+		"url": "http://llever.com"
+	},
+	"bin": {
+		"two-log":"cli.js"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "ava -v",
+		"precommit": "lint-staged",
+		"pub" : "npm run test && npm run npmUp && npm run git",
+		"npmUp": "npm version patch && npm publish",
+		"git": "git push && git push --tags"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"size-limit": [
+		{
+		  "path": "dist/two-log-cli.js",
+		  "gzip": false
+		}
+	 ],
+	"lint-staged": {
+		"linters":{
+			"*.{js,json,css,md}": [
+				"prettier --single-quote --trailing-comma es5 --write",
+				 "git add"
+				]
+		},
+		"ignore":["**/dist/*.js"]
+	  },
+	"files": [
+		"cli.js",
+		"src",
+		"lib"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"two-log"
+	],
+	"dependencies":{
+		"meow": "^5.0.0",
+		"two-log": "*"
+	},
+	"devDependencies": {
+		"lint-staged": "^7.0.0"
+	}
+}
